@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_tutorial/network_call/activity_screen.dart';
 import 'package:flutter_riverpod_tutorial/simple_counter/simple_counter.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class HomeView extends ConsumerWidget {
         children: [
           const SizedBox(height: 16),
           _createPage(context, 'Simple Counter', SimpleCounterScreen()),
+          _createPage(context, 'Network call', ActivityScreen()),
         ],
       ),
     );
@@ -27,13 +29,14 @@ class HomeView extends ConsumerWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const SimpleCounterScreen()),
+          MaterialPageRoute(builder: (context) => screen),
         );
       },
       child: Card(
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        child: SizedBox(
+        child: Container(
           height: 50,
+          color: Colors.blue,
           width: double.infinity,
           child: Center(
             child: Text(name, style: const TextStyle(fontSize: 16)),

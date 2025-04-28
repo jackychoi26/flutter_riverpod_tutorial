@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_tutorial/network_call/activity_screen.dart';
+import 'package:flutter_riverpod_tutorial/performing_side_effect/todo_list_screen.dart';
 import 'package:flutter_riverpod_tutorial/simple_counter/simple_counter.dart';
 
 void main() {
@@ -17,8 +18,9 @@ class HomeView extends ConsumerWidget {
       body: ListView(
         children: [
           const SizedBox(height: 16),
-          _createPage(context, 'Simple Counter', SimpleCounterScreen()),
+          _createPage(context, 'Simple counter', SimpleCounterScreen()),
           _createPage(context, 'Network call', ActivityScreen()),
+          _createPage(context, 'Performing side effect', TodoListScreen()),
         ],
       ),
     );

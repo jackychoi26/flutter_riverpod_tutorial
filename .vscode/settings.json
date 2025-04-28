@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "dart.lineLength": 80,
+  "editor.defaultFormatter": "Dart-Code.dart-code",
+  "editor.codeActionsOnSave": {
+  "quickfix.insertSemicolon": "always",
+  }
+}

@@ -31,6 +31,10 @@ class TodoList extends _$TodoList {
   }
 
   Future<void> addTodo(Todo todo) async {
+    state = const AsyncValue.loading();
     await Future.delayed(Duration(seconds: 2));
+    final current = state.value ?? [];
+    final updated = [...current, todo];
+    state = AsyncValue.data(updated);
   }
 }
